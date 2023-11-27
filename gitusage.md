@@ -24,10 +24,9 @@ push推送，origin main：远程仓库的主分支
 推送（push）：将本地分支的更改推送到远程仓库。执行 git push 命令时，Git 会将您在本地仓库中提交的更改上传到指定的远程仓库。这样可以共享您的更改，使其他团队成员能够查看、审查和集成您的代码更新。
 
 # 二次使用
-1. git add .--来添加文件
-2. git commit -m "message"
-3. git push -u origin main
-
+1. `git add .--来添加文件`
+2. `git commit -m "message"`
+3. `git push -u origin main`
 
 # 错误案例
 
@@ -42,19 +41,19 @@ fatal: Authentication failed for 'https://github.com/ywf154/yis_first_project.gi
 
 # git仓库的用法
 
-git remote add <remote_name> <remote_url>：
+
+`git remote add <remote_name> <remote_url>`
 添加一个新的远程仓库，指定远程仓库的名称（<remote_name>）和URL（<remote_url>）。
-git remote -v：
+`git remote -v`
 显示所有已配置的远程仓库及其对应的URL。
-git remote show <remote_name>：
+`git remote show <remote_name>`
 显示指定远程仓库的详细信息，包括远程分支和本地分支的对应关系。
-git remote rename <old_name> <new_name>：
+`git remote rename <old_name> <new_name>`
 将已配置的远程仓库重命名，将旧名称（<old_name>）改为新名称（<new_name>）。
-git remote remove <remote_name>：
+`git remote remove <remote_name>`
 移除指定的远程仓库。
-git remote set-url <remote_name> <new_url>：
+`git remote set-url <remote_name> <new_url>`
 修改指定远程仓库的URL，将其改为新的URL（<new_url>）。
 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
-git remote set-url origin  https://ywf154:ghp_RL6AJKh5NV0
-J6A42QOPl76WWobELKr482nEv@github.com/ywf154/learning-System.git
+`git remote set-url origin  https://ywf154:ghp_??@github.com/ywf154/learning-System.git`
 这个用来修改远程仓库的url(token)
