@@ -24,7 +24,7 @@ push推送，origin main：远程仓库的主分支
 推送（push）：将本地分支的更改推送到远程仓库。执行 git push 命令时，Git 会将您在本地仓库中提交的更改上传到指定的远程仓库。这样可以共享您的更改，使其他团队成员能够查看、审查和集成您的代码更新。
 
 # 二次使用
-1. `git add .--来添加文件`
+1. `git add .`                 git add .&&git commit -m "message&&git push -u origin main
 2. `git commit -m "message"`
 3. `git push -u origin main`
 
