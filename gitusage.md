@@ -8,6 +8,21 @@
 5. git branch -M main添加到哪个分区，一般是main
 6. git remote add origin https://ywf154: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@github.com/ywf154/learning-System.git
     添加到云端.  远程仓库名为origin
+这条命令的意思是将名为 origin 的远程仓库与位于 https://github.com/xxx.git 的远程仓库关联起来。
+远程仓库的地址包含了用户名、个人访问令牌（token）和仓库路径信息。
+通过执行这个命令，您可以使用 origin 作为远程仓库的简便名称进行后续的 Git 操作，
+例如拉取（pull）、推送（push）等。
 7. git push --set-upstream origin main
     push推送，origin main：远程仓库的主分支
 8. 这代表是将本地已存在的git项目的所有分支推送到的仓库。
+9. 拉取（pull）：从远程仓库获取最新的更改并合并到当前分支。执行 git pull 命令时，Git 会自动下载远程仓库中的最新更改，并将其合并到您当前所在的分支。这样可以确保您的本地代码与远程仓库保持同步，并获取其他人员在项目中所做的更新。
+推送（push）：将本地分支的更改推送到远程仓库。执行 git push 命令时，Git 会将您在本地仓库中提交的更改上传到指定的远程仓库。这样可以共享您的更改，使其他团队成员能够查看、审查和集成您的代码更新。
+
+fatal: Authentication failed for 'https://github.com/ywf154/yis_first_project.git/'
+这个错误提示表示在尝试使用提供的凭据进行 GitHub 身份验证时，认证失败。这可能是由以下几种原因导致的：
+错误的用户名或密码：请确保您输入的 GitHub 用户名和密码是正确的。确认没有输入错误或遗漏字符，并确保使用的是访问您目标仓库所需的凭据。
+二步验证（Two-Factor Authentication）：如果您已启用 GitHub 的二步验证功能，您需要使用生成的个人访问令牌（Personal Access Token）来替代密码进行身份验证。
+登录到您的 GitHub 帐户，生成并使用个人访问令牌作为密码进行身份验证。
+访问权限限制：检查您是否具有足够的权限来访问该仓库。如果您不是仓库的所有者或没有被授予写入权限，将无法进行身份验证和推送更改。
+网络连接问题：确认您的网络连接正常工作，没有任何防火墙或代理设置干扰访问 GitHub 的请求。
+临时问题：有时候，GitHub 服务器可能遇到临时问题，导致无法进行身份验证。请等待一段时间后再次尝试。
