@@ -2,22 +2,22 @@
 
 # 初次使用
 
-1. Remove-Item .git -Recurse -Force(如果有旧的，先移除旧的)
-2. git init（第一次使用需要）后续不需要
+1. `Remove-Item .git -Recurse -Force`(如果有旧的，先移除旧的)
+2. `git init`（第一次使用需要）后续不需要
    Initialized empty Git repository in C:/Users/yi/Desktop/桌面/msater lenrn/git_hub/.git/
    你已经成功地在xx路径下初始化了一个新的Git仓库。 现在你可以开始添加文件，进行提交，创建分支等操作了。
-3. git add .--来添加文件
-4. git commit -m "message"[message] 可以是一些备注信息。 
+3. `git add .`--来添加文件
+4. `git commit -m "message"`[message] 可以是一些备注信息。 
     提交暂存区的指定文件到仓库区.
-5. git branch -M main添加到哪个分区，一般是main
-6. git remote add origin https://ywf154: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@github.com/ywf154/learning-System.git
+5. `git branch -M main`添加到哪个分区，一般是main
+6. `git remote add origin https://ywf154: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@github.com/ywf154/learning-System.git`
     添加到云端.  远程仓库名为origin
 这条命令的意思是将名为 origin 的远程仓库与位于 https://github.com/xxx.git 的远程仓库关联起来。
 远程仓库的地址包含了用户名、个人访问令牌（token）和仓库路径信息。
 通过执行这个命令，您可以使用 origin 作为远程仓库的简便名称进行后续的 Git 操作，
 例如拉取（pull）、推送（push）等。
-7. git push --set-upstream origin main
-  也可使用git push -u origin main
+7. `git push --set-upstream origin main`
+  也可使用`git push -u origin main`
 push推送，origin main：远程仓库的主分支
 这代表是将本地已存在的git项目的所有分支推送到的仓库。
 拉取（pull）：从远程仓库获取最新的更改并合并到当前分支。执行 git pull 命令时，Git 会自动下载远程仓库中的最新更改，并将其合并到您当前所在的分支。这样可以确保您的本地代码与远程仓库保持同步，并获取其他人员在项目中所做的更新。
@@ -38,6 +38,33 @@ fatal: Authentication failed for 'https://github.com/ywf154/yis_first_project.gi
 访问权限限制：检查您是否具有足够的权限来访问该仓库。如果您不是仓库的所有者或没有被授予写入权限，将无法进行身份验证和推送更改。
 网络连接问题：确认您的网络连接正常工作，没有任何防火墙或代理设置干扰访问 GitHub 的请求。
 临时问题：有时候，GitHub 服务器可能遇到临时问题，导致无法进行身份验证。请等待一段时间后再次尝试。
+当你在使用 Git 执行与 GitHub 仓库相关的操作时，如 git push 或 git clone，出现 "fatal: Authentication failed for 'https://github.com/ywf154/learning-System.git/'" 错误通常表示认证失败。
+
+这个错误通常发生在以下几种情况下：
+
+无效的凭据：检查你使用的凭据（用户名和密码或访问令牌）是否正确。确保没有输入错误并且凭据没有过期。如果你使用的是访问令牌，确保该令牌具有足够的权限来执行所需的操作。
+
+未配置凭据：如果你尚未配置 Git 用于与 GitHub 进行身份验证的凭据，或者凭据已过期或被删除，会导致认证失败。你可以使用以下命令来配置凭据：
+
+使用用户名和密码：
+
+Copy
+git config --global credential.helper wincred
+使用访问令牌：
+
+Copy
+git config --global credential.helper manager-core
+在配置凭据后，Git 将在首次访问 GitHub 时要求你提供凭据，并在本地缓存它们以供将来使用。
+
+受限制的访问权限：该错误可能是由于你没有足够的权限来访问该仓库导致的。确保你具有正确的权限来执行所需的操作。如果你是仓库的拥有者或管理员，可以检查仓库的权限设置。
+
+如果你仍然遇到认证失败的问题，可以尝试以下解决方法：
+
+重新输入凭据：重新输入你的用户名和密码或访问令牌，确保没有输入错误。
+更新 Git 版本：确保你正在使用最新版本的 Git，因为旧版本可能存在与身份验证相关的问题。
+尝试使用 SSH 协议：考虑使用 SSH 协议而不是 HTTPS 进行仓库操作。使用 SSH 协议时，你需要设置 SSH 密钥并将其添加到 GitHub 帐户中。
+检查网络连接：确保你的网络连接正常，没有任何防火墙或代理服务器阻止与 GitHub 的通信。
+如果尝试了这些解决方法后问题仍然存在，建议检查 GitHub 支持文档或联系 GitHub 支持团队以获取更多帮助和指导。
 
 # git仓库的用法
 
