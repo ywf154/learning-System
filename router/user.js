@@ -21,15 +21,15 @@ const {reg_login_schema} = require('../schema/user')
 //9.2          从路由模块中把处理函数抽离到router_handle中
 router.post('/reguser',expressJoi(reg_login_schema),router_handler.regUser)
                     //^^^^^^^^^^第20步加入^^^^^^^^^^
-    /*5.3注册新用户(这段将剪走)
-    router.post('/reguser',(req,res)=>{
-        res.send('reguser OK')
-    })*/
+                                                    /*5.3注册新用户(这段将剪走)
+                                                    router.post('/reguser',(req,res)=>{
+                                                        res.send('reguser OK')
+                                                    })*/
 //9.2
 router.post('/login',router_handler.login)
-    /*5.4登录(这段将剪走)
-    router.post('/login',(req,res)=>{
-        res.send('login OK')
-    })*/
+                                                    /*5.4登录(这段将剪走)
+                                                    router.post('/login',(req,res)=>{
+                                                        res.send('login OK')
+                                                    })*/
 //5.2导出
 module.exports = router

@@ -4,7 +4,6 @@ const app = express()
 //22导入需要的包
 const joi = require('joi')
 
-
 //2配置cors跨域
 const cors = require('cors')
 //3配置解析表单数据的中间件z,注意：这个中间件只能解析application/x-www-form-urlencodeed格式的数据的中间件

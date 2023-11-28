@@ -9,12 +9,12 @@ exports.regUser=(req,res)=>{
     //15.1获取客户端提交到服务器的用户信息
     const userInfo = req.body
     console.log(userInfo)
-    //15.2对表单中的数据进行合法性的校验
-/*    if(!userInfo.username || !userInfo.passward){
-        //return res.send({status:1, message:'username and password is illegal!'})
-        return res.cc('username and password is illegal!')
-    }
-*/
+                                        //15.2对表单中的数据进行合法性的校验
+                                    /*    if(!userInfo.username || !userInfo.passward){
+                                            //return res.send({status:1, message:'username and password is illegal!'})
+                                            return res.cc('username and password is illegal!')
+                                        }
+                                    */
     //16.1定义sql语句，查询用户名是否被占用
     const sqlStr = 'SELECT * FROM users.ev_user where username=?'
     db.query(sqlStr,userInfo.username,(err,results)=>{
@@ -46,13 +46,7 @@ exports.regUser=(req,res)=>{
         return res.cc('chenggong.',0)
     })      
 
-
-
-
-
     })
-
-
 
     res.send('reguser OK')
 }
