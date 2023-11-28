@@ -71,12 +71,12 @@ fatal: Authentication failed for 'https://github.com/ywf154/yis_first_project.gi
 
 使用用户名和密码：
 
-Copy
-git config --global credential.helper wincred
+`git config --global credential.helper wincred`
+
 使用访问令牌：
 
-Copy
-git config --global credential.helper manager-core
+`git config --global credential.helper manager-core`
+
 在配置凭据后，Git 将在首次访问 GitHub 时要求你提供凭据，并在本地缓存它们以供将来使用。
 
 受限制的访问权限：该错误可能是由于你没有足够的权限来访问该仓库导致的。确保你具有正确的权限来执行所需的操作。如果你是仓库的拥有者或管理员，可以检查仓库的权限设置。
