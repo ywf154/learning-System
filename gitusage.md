@@ -51,7 +51,6 @@ push推送，origin main：远程仓库的主分支
 系统会尝试使用您的SSH密钥进行连接，并显示相关的验证信息。
 一旦您成功配置了SSH密钥，您可以在进行Git操作时省去输入用户名和密码的步骤。请确保妥善保管您的私钥，并避免将其泄露给他人。
 
-
 # 错误案例
 
 fatal: Authentication failed for 'https://github.com/ywf154/yis_first_project.git/'
